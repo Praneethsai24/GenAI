@@ -2,7 +2,7 @@ import os
 import requests
 from openai import OpenAI
 
-names = ["Praneeth", "Harshi", "Nischala", "Geethank"]
+names = ["Max", "Checo", "Charles", "Sainz"]
 
 agify_url = "https://api.agify.io"
 
