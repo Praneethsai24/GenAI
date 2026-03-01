@@ -1,5 +1,5 @@
 import requests
-name = "harshini"
+name = "Max"
 
 url = f"https://api.agify.io/?name={name}"
 
