@@ -8,3 +8,5 @@ response = requests.get(url)
 data = response.json()
 
 print(f"Seems like {data['name']} is {data['gender']} and data points used are {data['count']}")
+
+# Here gneder is a Model's Prediction
