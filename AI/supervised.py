@@ -1,7 +1,7 @@
-import requests 
+import requests  # requests helps python send HTTP request to ollama model
 import json
 
-
+# Training examples (Labeled Data)
 examples = [
     {"text" : "Limited offer", "label" : "spam"},
     {"text" : "You Got a reward, click here", "label" : "spam"},
@@ -11,6 +11,7 @@ examples = [
 
 new_mail = "Congratulations on winning a reward"
 
+# Building a Prompt
 prompt = "Classify this email as spam or not spam.\n\n"
 
 for ex in examples :
@@ -18,6 +19,7 @@ for ex in examples :
 
 prompt += f"Email: {new_mail}\nLabel:"
 
+# Sending request to Ollama model.
 response = requests.post(
     "http://localhost:11434/api/generate",
     json={
@@ -27,6 +29,7 @@ response = requests.post(
     }
 )
 
+# Convert response JSON
 result = response.json()
 
 print("Model prediction")
